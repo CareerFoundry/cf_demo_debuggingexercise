@@ -19,11 +19,11 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         selectedItemLabel.text = "You selected \(item!)"
-        takeMeBackButton.addTarget(self, action: "tappedButton:", forControlEvents: .TouchUpInside)
+        takeMeBackButton.addTarget(self, action: "tappedButton:", for: .touchUpInside)
 
     }
     
-    func buttonTapped(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+    func buttonTapped(_ sender: AnyObject) {
+        navigationController?.popViewController(animated: true)
     }
 }
